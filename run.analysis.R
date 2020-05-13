@@ -87,7 +87,8 @@ activities <- unique(merged_data$activity_number)
 
 #Creating an empty data frame of 563 Columns : 1st for subject, 2nd for activity and remaining 561 for variables
 new_df <- data.frame(matrix(,ncol=563))
-colnames(new_df) <- c("subject","activity",c(1:561))
+col_names <- gsub("^","Mean",features)
+colnames(new_df) <- c("subject","activity",col_names)
 
 #Getting the Required data
 
@@ -98,12 +99,15 @@ for (i in subjects){
     #Making a new data frame with subject and it's activity with mean of all variables
     make_df <- data.frame(i,j,t(matrix(colMeans(merged_data[index_match,3:563]))))
     #Redifining the colmanes same as colnames of empty data frame
-    colnames(make_df) <- c("subject","activity",c(1:561))
+    colnames(make_df) <- c("subject","activity",col_names)
     #Merging the data frame horizontally
-    new_df <- merge(new_df,make_df,all.x = T,all.y = T)
+    new_df <- rbind(new_df,make_df)
   }
 }
 
+
 #Printing the independent tidy data set with the average of each variable for each activity and each subject
 new_df
+
+write.table(new_df,file="independent mean data with each subject and activity",row.names=FALSE)
 
