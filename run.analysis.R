@@ -58,5 +58,5 @@ melted_data <- melt(descriptive_name_data,id.vars =c("subject_number","activity"
 tidy_indepen_data <- dcast(melted_data,subject_number+activity~variable,mean)
 colnames(tidy_indepen_data) <- c("subject","activity",gsub("^","avg_",mean_std_name))
 
-write.table(tidy_indepen_data,file="tidy_indepen_data",row.names = FALSE)
+write.table(tidy_indepen_data,file="tidy_indepen_data.txt",row.names = FALSE)
 
