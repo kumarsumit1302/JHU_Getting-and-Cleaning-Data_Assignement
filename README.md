@@ -26,7 +26,7 @@ The Computations done in this project is based on the data set of accelerometers
 For more details on the actual experiments please visit [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 
-### Followings computations are been done in this project:
+### Followings computations have been done in this project:
 1. Merging the training and the test sets to create one data set.
 2. Extracting only the measurements on the mean and standard deviation for each measurement.
 3. Using descriptive activity names to name the activities in the data set
