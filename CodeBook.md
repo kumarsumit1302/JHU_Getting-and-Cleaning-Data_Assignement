@@ -8,7 +8,7 @@ Please [visit](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition
 The script run.analysis.R is written to compute five different computation which are 
 
 ### 1. Merging Test and Train Data
-   The subjects, activities performed and their corresponding values are saved as variable name test_subject,test_activity and test_data. Similar notation is followed for train activity. All test data is combined in a data frame under name test_combined_df. Same procedure is followed tor train data. Both test and train data frames are combined in a single data frame with name **merged_data
+   The subjects, activities performed and their corresponding values are saved as variable name test_subject,test_activity and test_data. Similar notation is followed for train activity. All test data is combined in a data frame under name test_combined_df. Same procedure is followed tor train data. Both test and train data frames are combined in a single data frame with name **merged_data**
 
 ### 2. Extracting Mean and Standard Deviation data for each variable
 File feature.txt is read. all mean and standard deviation variable are identified with their index under variable name mean_and_std_matching_index. The details are as follwows
